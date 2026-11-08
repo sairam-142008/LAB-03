@@ -48,31 +48,6 @@ BDF_Lab_03/
 ├── test_runner.js        # Automated CLI test suite (63/63 passing tests)
 ├── .gitignore            # Git exclusion rules (node_modules, .env, *.db)
 └── screenshots/          # Postman test execution evidence
-    ├── 01-health-check.png
-    ├── 02-list-books-defaults.png
-    ├── 03-search-by-title-search-q-the.png
-    ├── 04-sort-by-price-desc-limit-3.png
-    ├── 05-pagination-limit-3-offset-3.png
-    ├── 06-price-range-min-price-300-max-price-420.png
-    ├── 07-max-price-only-max-price-300.png
-    ├── 08-get-one-book.png
-    ├── 09-create-book.png
-    ├── 10-update-book.png
-    ├── 11-check-update.png
-    ├── 12-delete-book.png
-    ├── 13-get-missing-book.png
-    ├── 14-get-with-non-numeric-id.png
-    ├── 15-invalid-order-by.png
-    ├── 16-invalid-order.png
-    ├── 17-invalid-limit.png
-    ├── 18-min-price-greater-than-max-price.png
-    ├── 19-create-without-title.png
-    ├── 20-create-with-non-numeric-price.png
-    ├── 21-create-with-invalid-json.png
-    ├── 22-update-missing-book.png
-    ├── 23-update-with-non-numeric-price.png
-    ├── 24-delete-already-deleted-book.png
-    ├── 25-unknown-route.png
     ├── render-01-get-all-books.png
     ├── render-02-search-gatsby.png
     ├── render-03-price-filter.png
@@ -241,101 +216,20 @@ This project is deployed as a live Web Service on Render:
 
 ## Postman Testing Evidence (Screenshots)
 
-### Live Render API Verification
-
-#### 1. Live Render - GET /books
+### 1. Live Render - GET /books
 ![Live Render GET Books](screenshots/render-01-get-all-books.png)
 
-#### 2. Live Render - Search by Title (Gatsby)
+### 2. Live Render - Search by Title (Gatsby)
 ![Live Render Search](screenshots/render-02-search-gatsby.png)
 
-#### 3. Live Render - Price Range Filter (250 to 400)
+### 3. Live Render - Price Range Filter (250 to 400)
 ![Live Render Price Range](screenshots/render-03-price-filter.png)
 
-#### 4. Live Render - Sort by Price DESC
+### 4. Live Render - Sort by Price DESC
 ![Live Render Sort DESC](screenshots/render-04-sort-price-desc.png)
 
-#### 5. Live Render - Pagination (limit=3, offset=3)
+### 5. Live Render - Pagination (limit=3, offset=3)
 ![Live Render Pagination](screenshots/render-05-pagination.png)
-
----
-
-### Comprehensive Postman Test Suite Evidence
-
-#### 01. Health Check Root Route
-![Health Check](screenshots/01-health-check.png)
-
-#### 02. List Books with Default Parameters
-![List Books Defaults](screenshots/02-list-books-defaults.png)
-
-#### 03. Search by Title (`search_q=the`)
-![Search by Title](screenshots/03-search-by-title-search-q-the.png)
-
-#### 04. Sort by Price DESC with Limit 3
-![Sort Price DESC Limit 3](screenshots/04-sort-by-price-desc-limit-3.png)
-
-#### 05. Pagination (`limit=3&offset=3`)
-![Pagination Limit 3 Offset 3](screenshots/05-pagination-limit-3-offset-3.png)
-
-#### 06. Price Range (`min_price=300&max_price=420`)
-![Price Range Filter](screenshots/06-price-range-min-price-300-max-price-420.png)
-
-#### 07. Max Price Only (`max_price=300`)
-![Max Price Filter](screenshots/07-max-price-only-max-price-300.png)
-
-#### 08. GET One Book by ID
-![Get One Book](screenshots/08-get-one-book.png)
-
-#### 09. POST Create Book (201 Created)
-![Create Book](screenshots/09-create-book.png)
-
-#### 10. PUT Update Book
-![Update Book](screenshots/10-update-book.png)
-
-#### 11. Verify Updated Book Details
-![Check Update](screenshots/11-check-update.png)
-
-#### 12. DELETE Book (200 OK)
-![Delete Book](screenshots/12-delete-book.png)
-
-#### 13. GET Missing Book (404 Not Found)
-![Get Missing Book 404](screenshots/13-get-missing-book.png)
-
-#### 14. GET with Non-Numeric ID (400 Bad Request)
-![Non-Numeric ID Validation](screenshots/14-get-with-non-numeric-id.png)
-
-#### 15. Invalid `order_by` Column (400 Bad Request)
-![Invalid Order By](screenshots/15-invalid-order-by.png)
-
-#### 16. Invalid Sort Direction `order` (400 Bad Request)
-![Invalid Order Direction](screenshots/16-invalid-order.png)
-
-#### 17. Invalid Limit Parameter (400 Bad Request)
-![Invalid Limit](screenshots/17-invalid-limit.png)
-
-#### 18. Validation: `min_price` Greater Than `max_price`
-![Min Price Greater Than Max Price](screenshots/18-min-price-greater-than-max-price.png)
-
-#### 19. Validation: Create Without Title (400 Bad Request)
-![Create Without Title](screenshots/19-create-without-title.png)
-
-#### 20. Validation: Create With Non-Numeric Price (400 Bad Request)
-![Create With Non-Numeric Price](screenshots/20-create-with-non-numeric-price.png)
-
-#### 21. Validation: Malformed / Invalid JSON Body
-![Invalid JSON](screenshots/21-create-with-invalid-json.png)
-
-#### 22. PUT: Update Missing Book (404 Not Found)
-![Update Missing Book](screenshots/22-update-missing-book.png)
-
-#### 23. PUT: Update With Non-Numeric Price
-![Update With Non-Numeric Price](screenshots/23-update-with-non-numeric-price.png)
-
-#### 24. DELETE: Already Deleted Book (404 Not Found)
-![Delete Already Deleted Book](screenshots/24-delete-already-deleted-book.png)
-
-#### 25. Unknown Route Handling (404 Not Found)
-![Unknown Route](screenshots/25-unknown-route.png)
 
 ---
 
