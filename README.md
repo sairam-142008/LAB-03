@@ -47,12 +47,17 @@ BDF_Lab_03/
 ├── README.md             # Complete documentation and testing evidence
 ├── test_runner.js        # Automated CLI test suite (63/63 passing tests)
 ├── .gitignore            # Git exclusion rules (node_modules, .env, *.db)
-└── screenshots/          # Postman test execution evidence
+└── screenshots/          # Postman test execution evidence (Live on Render)
     ├── render-01-get-all-books.png
     ├── render-02-search-gatsby.png
     ├── render-03-price-filter.png
     ├── render-04-sort-price-desc.png
-    └── render-05-pagination.png
+    ├── render-05-pagination.png
+    ├── render-06-validation-missing-title.png
+    ├── render-07-get-book-by-id.png
+    ├── render-08-delete-non-existent-book.png
+    ├── render-09-unknown-route-404.png
+    └── render-10-sort-price-asc.png
 ```
 
 ---
@@ -214,22 +219,37 @@ This project is deployed as a live Web Service on Render:
 
 ---
 
-## Postman Testing Evidence (Screenshots)
+## Postman Testing Evidence (Live Render API)
 
-### 1. Live Render - GET /books
+### 1. GET All Books (200 OK)
 ![Live Render GET Books](screenshots/render-01-get-all-books.png)
 
-### 2. Live Render - Search by Title (Gatsby)
+### 2. Search by Title (`search_q=Gatsby`) (200 OK)
 ![Live Render Search](screenshots/render-02-search-gatsby.png)
 
-### 3. Live Render - Price Range Filter (250 to 400)
+### 3. Price Range Filter (`min_price=250&max_price=400`) (200 OK)
 ![Live Render Price Range](screenshots/render-03-price-filter.png)
 
-### 4. Live Render - Sort by Price DESC
+### 4. Sort by Price DESC (`order_by=price&order=DESC`) (200 OK)
 ![Live Render Sort DESC](screenshots/render-04-sort-price-desc.png)
 
-### 5. Live Render - Pagination (limit=3, offset=3)
+### 5. Pagination (`limit=3&offset=3`) (200 OK)
 ![Live Render Pagination](screenshots/render-05-pagination.png)
+
+### 6. Validation: Missing Title (`POST /books/`) (400 Bad Request)
+![Validation Missing Title](screenshots/render-06-validation-missing-title.png)
+
+### 7. GET Book by ID (`GET /books/7`) (200 OK)
+![GET Book by ID](screenshots/render-07-get-book-by-id.png)
+
+### 8. DELETE: Non-Existent Book (`DELETE /books/99999`) (404 Not Found)
+![Delete Missing Book](screenshots/render-08-delete-non-existent-book.png)
+
+### 9. Unknown / Malformed Route (404 Not Found)
+![Unknown Route](screenshots/render-09-unknown-route-404.png)
+
+### 10. Sort by Price ASC (`order_by=price&order=ASC`) (200 OK)
+![Sort Price ASC](screenshots/render-10-sort-price-asc.png)
 
 ---
 
